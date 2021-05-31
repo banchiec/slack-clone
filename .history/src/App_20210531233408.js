@@ -12,7 +12,6 @@ import { auth } from "./firebase"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Spinner from "react-spinkit"
-import Login from './components/Login';
 
 function App() {
   
