@@ -9,8 +9,6 @@ import {useDocument, useCollection} from  "react-firebase-hooks/firestore"
 import { db } from '../firebase'
 import Message from './Message'
 
-
-
 function Chat() {
     const chatRef = useRef(null)
    const roomId = useSelector(selectRoomId)
@@ -37,41 +35,41 @@ function Chat() {
         <ChatContainer>
             {roomDetails && roomMessages && (
 
-                <>
-                    <Header>
-                        <HeaderLeft>
-                            <h4><strong>#${roomDetails?.data().name}</strong></h4>
-                            <StarBorderOutlinedIcon/>
-                        </HeaderLeft>
-                        <HeaderRight>
-                            <p>
-                                <InfoOutlinedIcon /> Details
-                            </p>
-                        </HeaderRight>
-                    </Header>
-                    <ChatMessages>
-                        { roomMessages?.docs.map((doc) =>{
-                            const {message, timestamp, user, userImage} = doc.data()
-                            return(
-                                <Message
-                                    key = {doc.id}
-                                    message = {message}
-                                    timestamp = {timestamp}
-                                    user = {user}
-                                    userImage = { userImage}
-                                />
-                            )
-                        })}
-                        <ChatBottom ref = {chatRef}/>
-                        {/* List out the messages */}
-                    </ChatMessages>
-                    <ChatInput
-                        //  ChannelName
-                        chatRef= {chatRef}
-                        channelName={roomDetails?.data().name}
-                        channelId = {roomId}
-                    ></ChatInput>
-                </>
+            <>
+                <Header>
+                    <HeaderLeft>
+                        <h4><strong>#${roomDetails?.data().name}</strong></h4>
+                        <StarBorderOutlinedIcon/>
+                    </HeaderLeft>
+                    <HeaderRight>
+                        <p>
+                            <InfoOutlinedIcon /> Details
+                        </p>
+                    </HeaderRight>
+                </Header>
+                <ChatMessages>
+                    { roomMessages?.docs.map((doc) =>{
+                        const {message, timestamp, user, userImage} = doc.data()
+                        return(
+                            <Message
+                                key = {doc.id}
+                                message = {message}
+                                timestamp = {timestamp}
+                                user = {user}
+                                userImage = { userImage}
+                            />
+                        )
+                    })}
+                    <ChatBottom ref = {chatRef}/>
+                    {/* List out the messages */}
+                </ChatMessages>
+                <ChatInput
+                    //  ChannelName
+                    chatRef= {chatRef}
+                    channelName={roomDetails?.data().name}
+                    channelId = {roomId}
+                ></ChatInput>
+            </>
 
             )}
         </ChatContainer>

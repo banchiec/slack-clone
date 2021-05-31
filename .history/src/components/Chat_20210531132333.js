@@ -9,8 +9,6 @@ import {useDocument, useCollection} from  "react-firebase-hooks/firestore"
 import { db } from '../firebase'
 import Message from './Message'
 
-
-
 function Chat() {
     const chatRef = useRef(null)
    const roomId = useSelector(selectRoomId)

@@ -22,7 +22,7 @@ function App() {
   
   const [user, loading ] = useAuthState(auth)
 
-  if(loading) {
+  if(true) {
     return (
       <AppLoading>
         <AppLoadingContents>
@@ -64,10 +64,6 @@ const AppBody = styled.div`
   height: 100vh;
   `
 const AppLoading = styled.div`
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  width: 100%;
 `
 
 const AppLoadingContents = styled.div`
@@ -75,12 +71,11 @@ const AppLoadingContents = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-bottom: 50%;
   align-items: center;
   > img {
     height: 100px;
     padding: 20px ;
-    margin-bottom: 40px;
   }
 `
 export default App;

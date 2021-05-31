@@ -16,7 +16,6 @@ import {
   Route,
 } from "react-router-dom";
 import Login from './components/Login';
-import Spinner from "react-spinkit"
 
 function App() {
   
@@ -26,12 +25,7 @@ function App() {
     return (
       <AppLoading>
         <AppLoadingContents>
-          <img src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg" alt=""/>
-          <Spinner
-          name="ball-spin-fade-loader"
-          color="purple"
-          fadeIn="none"
-           />
+
         </AppLoadingContents>
       </AppLoading>
     )
@@ -63,24 +57,7 @@ const AppBody = styled.div`
   display: flex;
   height: 100vh;
   `
-const AppLoading = styled.div`
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  width: 100%;
-`
+const AppLoading = styled.div``
 
-const AppLoadingContents = styled.div`
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 100px;
-  align-items: center;
-  > img {
-    height: 100px;
-    padding: 20px ;
-    margin-bottom: 40px;
-  }
-`
+const AppLoadingContents = styled.div``
 export default App;

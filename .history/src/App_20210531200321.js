@@ -22,7 +22,7 @@ function App() {
   
   const [user, loading ] = useAuthState(auth)
 
-  if(loading) {
+  if(true) {
     return (
       <AppLoading>
         <AppLoadingContents>
@@ -64,10 +64,6 @@ const AppBody = styled.div`
   height: 100vh;
   `
 const AppLoading = styled.div`
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  width: 100%;
 `
 
 const AppLoadingContents = styled.div`

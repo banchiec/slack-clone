@@ -9,7 +9,6 @@ import { auth } from '../firebase'
 
 export default function Header() {
     const [user] = useAuthState(auth)
-    console.log(user)
     return (
         <HeaderContainer>
             {/* Header Left */}
@@ -17,11 +16,9 @@ export default function Header() {
                 <HeaderAvatar
                     onClick={()=>auth.signOut()}
                     alt={user?.displayName}
-                    src={user?.photoURL}
+                    src={user?.photoUrl}
 
                 />
-                <h3>{user?.displayName}</h3>
-
                 <AccessTimeIcon/>
 
             </HeaderLeft>

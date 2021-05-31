@@ -22,7 +22,7 @@ function App() {
   
   const [user, loading ] = useAuthState(auth)
 
-  if(loading) {
+  if(true) {
     return (
       <AppLoading>
         <AppLoadingContents>

@@ -20,7 +20,7 @@ export default function Header() {
                     src={user?.photoURL}
 
                 />
-                <h3>{user?.displayName}</h3>
+                <h4>{user?.displayName}</h4>
 
                 <AccessTimeIcon/>
 
